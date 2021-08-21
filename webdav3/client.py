@@ -300,7 +300,7 @@ class Client(object):
         except ResponseErrorCode:
             return False
 
-        if int(response.status_code) == 200:
+        if int(response.status_code) in [200,207]:
             return True
         return False
 
